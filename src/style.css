@@ -8,26 +8,21 @@ body {
   width: 80%;
   margin: 0.8rem auto;
 }
-
 h1 {
   margin-left: 6rem;
   margin-top: 2rem;
  
 }
-
 .recent-scores {
   display: flex;
   width: 70%;
 }
-
  .refresh {
   height: 4vh;
  border: 2px solid rgb(68, 64, 64);
   cursor: pointer;
   margin-left:2rem ;
-  
 } 
-
 .scores-headline {
   display: flex;
   justify-content: flex-start;
