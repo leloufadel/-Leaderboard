@@ -1,3 +1,59 @@
-.hello {
-  color: red;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+body {
+  font-family: poppins, Arial, Helvetica, sans-serif;
+}
+.showcase {
+  display: flex;
+  width: 80%;
+  margin: 0.8rem auto;
+}
+
+h1 {
+  margin-left: 6rem;
+  margin-top: 2rem;
+ 
+}
+
+.recent-scores {
+  display: flex;
+  width: 70%;
+}
+
+ .refresh {
+  height: 4vh;
+ border: 2px solid rgb(68, 64, 64);
+  cursor: pointer;
+  margin-left:2rem ;
+  
+} 
+
+.scores-headline {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+  margin-right: 2rem;
+  margin-bottom: 4rem;
+}
+.scores-headline h3 {
+  margin: 0;
+}
+.add-scores{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 70%;
+  gap: 0.8rem;
+}
+form button{
+  cursor: pointer;
+  border: 2px solid gray;
+  height: 5vh;
+  margin-left: 4rem;
 }
