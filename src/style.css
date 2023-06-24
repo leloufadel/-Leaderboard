@@ -3,52 +3,71 @@
 body {
   font-family: poppins, Arial, Helvetica, sans-serif;
 }
+
 .showcase {
   display: flex;
   width: 80%;
-  margin: 0.8rem auto;
+  margin: 2rem auto;
 }
+
 h1 {
-  margin-left: 6rem;
-  margin-top: 2rem;
- 
+  margin-left: 2rem;
 }
+
 .recent-scores {
   display: flex;
-  width: 70%;
+  flex-direction: column;
+  width: 40%;
 }
- .refresh {
-  height: 4vh;
- border: 2px solid rgb(68, 64, 64);
+
+.refresh {
+  height: 5vh;
+  margin-left: 2rem;
+  border: 2px solid grey;
   cursor: pointer;
-  margin-left:2rem ;
-} 
+  margin-right: 10%;
+}
+
 .scores-headline {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 90%;
-  margin-right: 2rem;
-  margin-bottom: 4rem;
 }
-.scores-headline h3 {
+
+.scores-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
   margin: 0;
+  padding: 0;
 }
-.add-scores{
+
+.scores-list li {
+  margin-bottom: 0.5rem;
+}
+
+.scores-list:nth-child(even) {
+  background-color: grey;
+}
+
+.new-score {
+  width: 40%;
   display: flex;
   flex-direction: column;
-  width: 50%;
 }
-form {
+
+.new-score form {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  width: 70%;
-  gap: 0.8rem;
+  width: 60%;
 }
-form button{
+
+form input {
+  margin-bottom: 1.2rem;
+}
+
+form button {
   cursor: pointer;
-  border: 2px solid gray;
+  border: 2px solid grey;
   height: 5vh;
-  margin-left: 4rem;
 }
