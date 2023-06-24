@@ -12,7 +12,7 @@ const allScores = [];
 const addBtn = dom.submitScore;
 const { scoreList } = dom;
 
-addBtn.addEventListener('click',() => {
+addBtn.addEventListener('click', () => {
   const name = dom.nameInput.value;
   const score = dom.scoreInput.value;
 
