@@ -1,4 +1,4 @@
-import { scoreList, allScores as all } from './scoreObject.js';
+import { scoreList } from './scoreObject.js';
 import { getGameScores } from './gameAPI.js';
 
 const populateScores = async () => {
