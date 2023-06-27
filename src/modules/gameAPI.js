@@ -18,13 +18,13 @@ const getGameScores = async () => {
   return myResponses;
 };
 
-const sendScore = async () => {
+const saveScore = async () => {
   const name = nameInput.value;
   const score = scoreInput.value;
   const isNotANumber = Number.isNaN(score);
 
-  const isGreaterLess = score > 0 || score < 0 || score === 0;
-  if (name !== '' && !isNotANumber && isGreaterLess) {
+  const isGreaterandLess = score > 0 || score < 0 || score === 0;
+  if (name !== '' && !isNotANumber && isGreaterandLess) {
     const newScore = new Score(name, score);
     await fetch(scoresEndpoint, {
       method: 'POST',
@@ -40,6 +40,6 @@ const sendScore = async () => {
   scoreInput.value = '';
 };
 
-submitScore.addEventListener('click', sendScore);
+submitScore.addEventListener('click', saveScore);
 
-export { getGameScores, sendScore };
+export { getGameScores, saveScore };

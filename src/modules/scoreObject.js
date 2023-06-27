@@ -17,8 +17,8 @@ addBtn.addEventListener('click', () => {
   const score = dom.scoreInput.value;
 
   const isNotANumber = Number.isNaN(score);
-  const isGreaterLess = score > 0 || score < 0 || score === 0;
-  if (name !== '' && !isNotANumber && isGreaterLess) {
+  const isGreaterandLess = score > 0 || score < 0 || score === 0;
+  if (name !== '' && !isNotANumber && isGreaterandLess) {
     const newScore = new Score(name, score);
     allScores.push(newScore);
   }
