@@ -25,20 +25,29 @@ const saveScore = async () => {
 
   const isGreaterandLess = score > 0 || score < 0 || score === 0;
   if (name !== '' && !isNotANumber && isGreaterandLess) {
-    const newScore = new Score(name, score);
-    await fetch(scoresEndpoint, {
-      method: 'POST',
-      body: JSON.stringify(newScore),
-      headers: {
-        'Content-type': 'application/json',
-      },
-    })
-      .then((response) => { response.json(); });
+    try {
+      const newScore = new Score(name, score);
+      const response = await fetch(scoresEndpoint, {
+        method: 'POST',
+        body: JSON.stringify(newScore),
+        headers: {
+          'Content-type': 'application/json',
+        },
+      });
+      if (!response.ok) {
+        throw new Error(`${response.status} - ${response.statusText}`);
+      }
+      const responseData = await response.json();
+      console.log(responseData); // Handle the response data as needed
+    } catch (error) {
+      console.error('Error:', error.message); // Handle the error
+    }
   }
 
   nameInput.value = '';
   scoreInput.value = '';
 };
+
 
 submitScore.addEventListener('click', saveScore);
 
