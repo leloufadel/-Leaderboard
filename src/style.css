@@ -9,7 +9,7 @@ body {
 .showcase {
   display: flex;
   width: 80%;
-  margin: 2rem auto;
+  margin: 2.1rem auto;
 }
 
 h3 {
@@ -29,7 +29,7 @@ h1 {
 }
 
 #refresh {
-  color: #6108d4;
+  color: #5b09c7;
   border: 2px solid;
   border-radius: 5px;
   width: 5rem;
@@ -38,7 +38,7 @@ h1 {
 }
 
 #refresh:hover {
-  transform: scale(0.95);
+  transform: scale(0.85);
 }
 
 #refresh:active {
